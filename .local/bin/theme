@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+theme="$1"
+
+if [[ "$theme" == "rose-pine-main" || "$theme" == "main" || "$theme" == "dark" || "$theme" == "rosepinemain" || "$theme" == "rosepine" ]]; then
+    echo 'include themes/rose-pine-main.conf' > "$HOME/.config/kitty/theme.conf"
+    echo '@import "themes/rose-pine-main.rasi"' > "$HOME/.config/rofi/theme.rasi"
+    echo 'vim.cmd.colorscheme("rose-pine-main")' > "$HOME/.config/nvim/lua/config/colorscheme.lua"
+
+elif [[ "$theme" == "rose-pine-dawn" || "$theme" == "dawn" || "$theme" == "light" || "$theme" == "rosepinedawn" ]]; then
+    echo 'include themes/rose-pine-dawn.conf' > "$HOME/.config/kitty/theme.conf"
+    echo '@import "themes/rose-pine-dawn.rasi"' > "$HOME/.config/rofi/theme.rasi"
+    echo 'vim.cmd.colorscheme("rose-pine-dawn")' > "$HOME/.config/nvim/lua/config/colorscheme.lua"
+
+elif [[ "$theme" == "rose-pine-moon" || "$theme" == "moon" || "$theme" == "rosepinemoon" ]]; then
+    echo 'include themes/rose-pine-moon.conf' > "$HOME/.config/kitty/theme.conf"
+    echo '@import "themes/rose-pine-moon.rasi"' > "$HOME/.config/rofi/theme.rasi"
+    echo 'vim.cmd.colorscheme("rose-pine-moon")' > "$HOME/.config/nvim/lua/config/colorscheme.lua"
+
+else
+    echo "Unknown colorscheme: $theme"
+    exit 1
+fi
