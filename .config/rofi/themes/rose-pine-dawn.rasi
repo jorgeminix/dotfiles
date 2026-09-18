@@ -1,0 +1,14 @@
+* {
+bg: #FAF4ED;
+cur: #575279;
+fgd: #575279;
+cmt: #9893A5;
+cya: #56949F;
+pur: #907AA9;
+blu: #286983;
+ora: #EA9D34;
+ros: #D7827E;
+red: #B4637A;
+yel: #EA9D34;
+grn: #56949F;
+}
